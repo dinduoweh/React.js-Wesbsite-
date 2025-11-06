@@ -1,0 +1,50 @@
+:root{
+  --bg: #f7f7fb;
+  --text: #111827;
+  --accent: #2563eb;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+.container{max-width:900px;margin:0 auto;padding:24px}
+.nav{background:white;box-shadow:0 1px 0 rgba(0,0,0,0.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px}
+.brand{font-weight:700}
+.links a{margin-left:16px;color:inherit;text-decoration:none}
+.hero{padding:48px 0;text-align:left}
+.hero h1{margin:0 0 8px;font-size:2rem}
+.about p{line-height:1.6}
+.projects .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:white;padding:16px;border-radius:8px}
+/* Projects page custom styles */
+.project-search::placeholder{color:#888;opacity:1}
+.project-tags{margin-bottom:8px}
+.tag, .tag-active{transition:background .2s,color .2s}
+.tag-active{background:#222!important;color:#fff!important}
+.tag{background:transparent;color:#222}
+.ext{font-size:0.95em;opacity:0.8;margin-left:2px}
+.contact-form{display:flex;flex-direction:column;gap:8px;max-width:560px}
+.contact-form input,.contact-form textarea{padding:8px;border:1px solid #ddd;border-radius:6px}
+.contact-form button{background:var(--accent);color:white;border:none;padding:10px 14px;border-radius:6px;cursor:pointer}
+.status{margin-top:12px;color:green}
+
+/* Contact page styles to match attached design */
+.contact-inner{display:flex;align-items:flex-start;gap:32px;padding:32px 0}
+.social-row{display:flex;gap:18px;align-items:center}
+.icon-link{display:inline-flex;align-items:center;justify-content:center;background:transparent;border-radius:50%;width:44px;height:44px}
+.icon-link svg{display:block}
+.icon-link.linked{padding:4px}
+.icon-link .linked-inner{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:#f3f4f6}
+
+.contact-block h2{font-size:1.6rem;margin:6px 0}
+.contact-block .lead{color:#374151;margin:0 0 12px}
+.emails{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.emails a{color:var(--text);text-decoration:underline;word-break:break-all}
+
+.resources{display:flex;gap:18px;align-items:center}
+.resources a{color:var(--text);text-decoration:underline;display:inline-flex;gap:6px;align-items:center}
+.resources .ext{font-size:0.9rem;opacity:0.8;margin-left:4px}
+
+@media (max-width:720px){
+  .contact-inner{flex-direction:column}
+  .social-row{justify-content:flex-start}
+}
